@@ -55,6 +55,26 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
+
+		<!--
+			在传统Spring应用中，我们可以通过如下配置加入对Xml格式数据的消息转换实现：
+
+			@Configuration
+			public class MessageConverterConfig1 extends WebMvcConfigurerAdapter {
+				@Override
+				public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+					Jackson2ObjectMapperBuilder builder = Jackson2ObjectMapperBuilder.xml();
+					builder.indentOutput(true);
+					converters.add(new MappingJackson2XmlHttpMessageConverter(builder.build()));
+				}
+			}
+			在Spring Boot应用不用像上面这么麻烦，只需要加入jackson-dataformat-xml依赖，
+			Spring Boot就会自动引入MappingJackson2XmlHttpMessageConverter的实现：
+		-->
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
