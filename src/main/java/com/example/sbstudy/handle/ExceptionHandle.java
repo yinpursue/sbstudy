@@ -1,7 +1,7 @@
 package com.example.sbstudy.handle;
 
 import com.example.sbstudy.Exception.MyException;
-import com.example.sbstudy.result.ResultVO;
+import com.example.sbstudy.vo.ResultVO;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 public class ExceptionHandle {
 
     /**
-     * org.springframework.http.converter.HttpMessageNotWritableException: No converter found for return value of type: class com.example.sbstudy.result.ResultVO
+     * org.springframework.http.converter.HttpMessageNotWritableException: No converter found for return value of type: class com.example.sbstudy.vo.ResultVO
      * 	解决：序列化问题，ResultVO未提供get方法。
      * @param req
      * @param e

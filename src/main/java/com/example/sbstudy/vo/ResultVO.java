@@ -1,4 +1,4 @@
-package com.example.sbstudy.result;
+package com.example.sbstudy.vo;
 
 public class ResultVO<T> {
     private int code;
